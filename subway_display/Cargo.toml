@@ -1,0 +1,19 @@
+[package]
+name = "subway_display"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+esp-hal = { version = "1.1.1", features = ["esp32", "unstable"] }
+esp-rtos = { version = "0.3.0", features = ["esp32", "embassy", "esp-alloc", "esp-radio" ] }
+esp-bootloader-esp-idf = { version = "0.5.0", features = ["esp32"] }
+embassy-executor = "0.10.0"
+embedded-io-async = { version = "0.7.0" }
+embassy-time = { version = "0.5.1", features = ["tick-hz-1_000_000"] }
+esp-backtrace = { version = "0.19.0", features = ["esp32", "panic-handler", "println"] }
+esp-println = { version = "0.17.0", features = ["esp32"] }
+embassy-net = { version = "0.9.1", features = ["tcp", "udp", "dhcpv4", "medium-ip"] }
+esp-radio = { version = "0.18.0", features = ["esp32", "wifi", "esp-alloc", "unstable"] }
+esp-alloc = { version = "0.10.0", features = ["esp32"] }
+static_cell = { version = "2.1.1" }
+proto = { path = "../proto" }

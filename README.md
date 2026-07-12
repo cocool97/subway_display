@@ -41,6 +41,11 @@ podman-compose -f podman-compose.yml up -d
 
 TODO
 
+Env:
+
+WIFI_SSID
+WIFI_PASSWORD
+
 ## Communication protocol
 
 The protocol used to communicate between the server and the microcontroller is a basic custom binary protocol. It has been designed to be very light to keep the microcontroller power consumption as low as possible.

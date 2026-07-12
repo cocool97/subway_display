@@ -17,6 +17,9 @@ fn main() -> Result<()> {
     setup_logger(opts.versosity);
 
     log::info!("starting server v{}...", env!("CARGO_PKG_VERSION"));
+    log::info!("listening on {}", opts.listen_address);
+    log::debug!("monitoring line {}", opts.line_ref);
+    log::debug!("monitoring stop {}", opts.monitoring_ref);
 
     let prim_api_manager =
         PrimApiManager::new(opts.prim_api_key, opts.line_ref, opts.monitoring_ref);
