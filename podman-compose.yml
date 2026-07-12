@@ -1,0 +1,8 @@
+---
+services:
+  subway_server:
+    image: subway_server:latest
+    restart: unless-stopped
+    container_name: subway_server
+    ports:
+      - "8080:8080"
